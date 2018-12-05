@@ -1,4 +1,26 @@
 // pages/home/home.js
+// 导航栏
+var app=getApp()
+
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    navbar: ['今日推荐', '时尚', '国际', '美妆', '电子', '居家'],
+    currentTab: 0,
+  },
+
+  // 导航切换监听
+  navbarTap: function(e) {
+    console.debug(e);
+    this.setData({
+      currentTab: e.currentTarget.dataset.idx
+    })
+  },
+})
+
 Page({
 
   /**
